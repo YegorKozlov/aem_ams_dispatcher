@@ -1,0 +1,9 @@
+# Conditions to append html extension
+#RewriteCond %{REQUEST_URI} !.*/$
+#RewriteCond %{REQUEST_URI} !\.html$
+#RewriteCond %{REQUEST_URI} !^/etc.*
+#RewriteRule (.*)$ $1.html
+
+#RewriteCond %{REQUEST_URI} ^/(system|content|dispatcher|etc.clientlibs|libs|etc)/.*
+#RewriteRule .? - [S=3]
+#RewriteRule /(.*) /content/we-retail/$1 [PT,NC]

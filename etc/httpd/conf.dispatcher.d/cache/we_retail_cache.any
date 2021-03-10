@@ -1,0 +1,5 @@
+/0000 { /type "deny"  /glob "*" }
+/0001 { /type "allow" /glob "/content/we-retail/*.html" }
+/0002 { /type "allow" /glob "/etc.clientlibs/*" }
+/0003 { /type "allow" /extension '(css|js|gif|ico|png|jpe?g|bmp|swf|eot|otf|svg|ttf|woff|woff2|xlsx?|pptx?|docx?|pdf)' }
+

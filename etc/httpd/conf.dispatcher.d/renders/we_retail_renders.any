@@ -1,0 +1,6 @@
+/0 {
+  /hostname "${PUBLISH_IP}"
+  /port "${PUBLISH_PORT}"
+  /timeout "10000"
+}
+
