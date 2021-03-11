@@ -28,6 +28,7 @@
 
 /0018 { /type "allow" /method "GET" /url "/libs/granite/security/currentuser.json" }
 /0019 { /type "allow" /url "/etc/cloudsettings.kernel.js/*" }
+# allow commerce-specific selectors
 /0020 { /type "allow" /extension "json" /selectors "model" /path "/content/*" }
 /0021 { /type "allow" /extension "json" /selectors "commerce" /path "/content/*" }
 /0022 { /type "allow" /extension "json" /selectors "pagedata" /path "/content/*" }
