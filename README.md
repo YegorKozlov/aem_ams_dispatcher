@@ -10,7 +10,7 @@
 The AMS Dispatcher Docker Image leverages the [Official CentOS systemd docker container](https://hub.docker.com/r/centos/systemd/).
 *systemd* is important because AMS runs HTTPd as a systemd service and reads variables from _/etc/sysconfig/httpd_ on service startup.
 
-! Note that /etc/sysconfig/httpd is specific to centos-based distributions which include Centos, Red Hat and Amazon Linux. 
+> :warning: Note that /etc/sysconfig/httpd is specific to centos-based distributions which include Centos, Red Hat and Amazon Linux. It may not work in other LInux distros.
 
 ```dockerfile
 FROM centos/systemd
@@ -43,6 +43,7 @@ CMD ["/usr/sbin/init"]
 $ docker build --rm --no-cache -t ams-dispatcher .
 ```
 
+
 ## Start the container
 
 ```shell
@@ -56,8 +57,7 @@ edit your hosts file and add
 ```
 127.0.0.1 localhost.we-retail.com
 ```
-start AEM Publish on port 4503
-http://localhost.we-retail.com/content/we-retail/us/en.html
+start AEM Publish on port 4503 and then navigate to http://localhost.we-retail.com/content/we-retail/us/en.html
 
 ## Dispatcher Logs
 Connect to a running container and tail logs in /etc/httpd/logs/*
